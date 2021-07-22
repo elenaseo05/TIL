@@ -172,3 +172,126 @@ someAnyObject = 123.12 // 오류발생
 없음을 의미하는 키워드 
 null, NULL, Null 동일 
 
+
+
+컬렉션 타입
+
+    // 빈 Int Array 생성
+    var integers: Array<Int> = Array<Int>()
+    // 
+    integers.append(1)
+    integers.append(100)
+    //integers.append(101.1) // integer에는 실수를 넣을 수 없음(X)
+
+    integers.contains(100) // 100이라는 값이 포함이 되어있는지?
+    integers.contains(99) // 
+
+    // 0번 인덱스에 있는 값을 없애 달라
+    integers.remove(at: 0)
+    // 마지막 요소를 없애는 것
+    integers.removeLast()
+    // 모두 없애기 
+    integers.removeAll()
+    // intgers에 몇개가 들어있는지 확인
+    integers.count
+Array를 표현할 수 있는 다양한 방법들
+
+    //Array<Double>와 [Double]은 동일한 표현이다.
+    // 빈 Double Array 생성
+    var double: Array<Double> = [Double]()
+
+    // 빈 String Array 생성
+    var strings: [String] = [String]()
+
+    // 빈 Character Array 생성
+    // []는 새로운 빈 Array
+    var characters: [Character] = []
+
+    // let을 사용하여 Array를 선언하면 불변 Array
+    let immutableArray = [1,2,3]
+    // let은 변경이 불가능하기 때문에 append 및 remove를 할 수 없다.
+Dictionary
+
+    // Key가 String 타입이고 Value가 Any인 빈 Dictionary 생성
+    var anyDictionary: Dictionary<String, Any> = [String: Any]()
+    anyDictionary["someKey"] = "value"
+    anyDictionary["anotherKey"] = 100
+
+    anyDictionary // ["someKey": "value", "anotherKey": 100]
+    // key에 대한 값을 변경 할 수 있다.
+    anyDictionary["someKey"] = "dictionary"
+    anyDictionary // ["someKey": "dictionary", "anotherKey": 100]
+
+    // key에 대한 값을 없애고 싶을 때
+    anyDictionary.removeValue(forKey: "anotherKey")
+
+    // key에 대한 값을 없애고 싶을 때
+    anyDictionary["someKey"] = nil
+
+
+    let emptyDictionary: [String: String] = [ : ]
+    let initalizedDictionary: [String: String] = ["name": "jangilkyu", "gender" : "mail"]
+함수 기본
+
+함수 선언
+
+   func 함수이름(매개변수1이름: 매개변수1타입, 매개변수2이름: 매개변수2타입) -> 반환 타입{
+       함수 구현 부
+
+        return 반환 값
+   }
+반환되는 값이 없는 함수
+
+   func printMyName(name: String) -> Void {
+       print(name)
+   }
+
+   printMyName(String: "장일규")
+반환되는 값이 있는 함수
+
+    func sum(a: Int,b: Int) -> Int {
+        return a + b
+    }
+
+    sum(a: 3, b: 2)
+매개변수와 반환값이 전부 없는 경우
+
+    func hello() -> Void {
+        print("hello")
+    }
+
+    hello()
+함수 고급
+
+매개변수 기본 값
+기본값을 갖는 매개변수는 매개변수 목록 중에 뒤쪽에 위치하는 것이 좋다.
+
+    func greeting(friend: String, me: String = "jangilkyu") {
+        print("Hello \(friend)! I'm \(me)")
+    }
+
+    // 매개변수 기본값을 가지는 매개변수는 생략이 가능
+    greeting(friend: "sujung") // Hello sujung! I'm jangilkyu
+전달인자 레이블
+전달인자 레이블은 함수를 호출할 때에 매개변수의 역할을 더 명확하게 하거나 함수 사용자의 입장에서 표현하고자 할때 사용
+
+    func greeting(to friend: String, from me: String){
+        print("Hello \(friend)! I'm \(me)")
+    }
+
+    // 함수 호출 시 전달인자 레이블 사용해야함
+    greeting(to: "sujung",from: "ilkyu")
+가변 매개변수
+
+매개변수로 전달될 값들에 갯수가 명확치 않을 시 가변 매개변수를 사용할 수 있다.
+
+매개변수 뒤에 ... 마침표 3개를 찍으면된다.
+
+함수당 하나만 가질 수 있다.
+
+    func sayHelloToFriends(me: String, friends: String...) -> String {
+        return "Hello \(friends)! I'm \(me)!"
+    }
+
+    print(sayHelloToFriends(me: "jangilkyu", friends: "sujung", "mina", "chulsu")) //Hello ["sujung", "mina", "chulsu"]! I'm jangilkyu!
+    print(sayHelloToFriends(me: "ilkyu")) //Hello []! I'm ilkyu!
