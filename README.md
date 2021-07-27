@@ -14,14 +14,14 @@
 
 ## **Foundation**
 
-- [정규표현식 Regex]()
+- [정규표현식 Regex](https://github.com/elenaseo05/TIL/tree/main/Foundation/Regular%20expression%20(regex))
 
 
 ## **Algorithm**
 
-[알고리즘 기초와 Big-O 표기 ]()
+[알고리즘 기초와 Big-O 표기 ](https://github.com/elenaseo05/TIL/tree/main/Algorithm)
 
 
 ## **NetWork**
 
-[네트워크 기초]()
+[네트워크 기초](https://github.com/elenaseo05/TIL/tree/main/%20NetWork)
