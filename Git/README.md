@@ -2,7 +2,9 @@
 ---------
 
 ## git hub 시작하기 
-[README 문법 ]()
+
+설명, Text 
+[README의 시작, MARKDOWN ]()
 
 
 
