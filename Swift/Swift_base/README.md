@@ -1,4 +1,69 @@
 # Swift 
+## **Xcode**
+----
+
+#### Xcode 
+
+- command + Z : undo
+
+- command + Shift + Z : redo
+
+- command + BackSpace : 커서부터 왼쪽 지우기
+
+- command + 방향키 : 해당 방향의 끝으로 이동
+
+- command + Shift + K : 프로젝트 클린
+
+- command + B : 프로젝트 빌드
+
+- command + R : 프로젝트 실행
+
+- command + Shift + O : 프로젝트 내 파일 / 클래스 / 함수 검색
+
+- command + Shift + F : 파인드 창
+
+- command + F : 현재 창에서 검색
+
+- command + E : 현재 선택된 텍스트 블럭을 모든 텍스트에디트에 복사 ( ?.. 설명을 잘 못하겠네요... )
+
+- command + G : 현재 페이지에 텍스트에디트에 적힌 문구 순차 검색 ( 위 command + E 와 활용도 매우 높습니다 )
+
+- command + Shift + G : 현재 페이지에 텍스트에디트에 적힌 문구 역순차 검색
+
+- command + alt + Enter : 현재창 이중 분할
+
+- command + Enter : 현재창을 단일창으로 변경
+
+- command + 0 : 왼쪽에 프로젝트 파인더 및 검색 등등 윈도우 숨기기 & 열기
+
+- command + 1 : 프로젝트 파인더 열기
+
+- command + 2 : 프로젝트 하이라키 창 열기
+
+- command + 3 : 프로젝트 검색 창 열기
+
+- command + 4 : 프로젝트 워닝 및 에러 창 열기
+
+- command + 5 : 테스트 타겟창 열기
+
+- command + 6 : 디버그 세션 창
+
+- command + 7 : 디버깅 브레이크 포인트 창
+
+- command + 8 : 빌드 관련 히스토리 ?
+
+- command + \ : 브레이크 포인트 걸기
+
+- command + Y : 브레이크 포인트 비활성화 / 활성화
+
+- command + Shift + Y : 하단 디버그 세션 창 열기 / 닫기
+
+- command + / : 주석 걸기
+
+- control + command + 좌우 화살표 : 이전/이후 페이지 이동
+
+- command + [ ] : 해당 방향으로 들여쓰기
+
 ## **Swift 특징**
 ----
 
