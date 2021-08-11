@@ -50,7 +50,7 @@
 
 - command + 7 : 디버깅 브레이크 포인트 창
 
-- command + 8 : 빌드 관련 히스토리 ?
+- command + 8 : 빌드 관련 히스토리
 
 - command + \ : 브레이크 포인트 걸기
 
@@ -58,7 +58,7 @@
 
 - command + Shift + Y : 하단 디버그 세션 창 열기 / 닫기
 
-- command + / : 주석 걸기
+- command + / : 주석 
 
 - control + command + 좌우 화살표 : 이전/이후 페이지 이동
 
@@ -103,6 +103,19 @@ type(class, struct, enum, extension)
 
 구조체 는 dump()으로 출력 하면 모든 정보를 확인 하기 싶다. 
 
+### 상수 & 변수
+
+- 상수 let
+    변하지 않는 값 
+```swift
+let 상수 : Int = 10
+```
+- 변수 var
+    변하는 값 
+```swift
+var 변수 : Int = 5
+```
+
 ### Swift 기본 데이터 타입 (primitive type)
 
 - Int : 64bit 정수형
@@ -114,3 +127,13 @@ type(class, struct, enum, extension)
 - String: 문자열
 - Any: 모든 타입을 지칭하는 키워드
 
+
+### Swift의 COLLECTION
+- Array
+    데이터 타입의 값들을 *순서대로* 저정하는 리스트
+
+- Dictionary
+    순서없이 *키(key)와 값(Value) 한 쌍*으로 데이터를 저장하는 컬렉션 타입
+
+- Set
+    같은 데이터 타입의 값을 *순서없이* 저장하는 리스트 (집합)
