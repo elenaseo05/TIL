@@ -24,9 +24,9 @@
 
 - command + F : 현재 창에서 검색
 
-- command + E : 현재 선택된 텍스트 블럭을 모든 텍스트에디트에 복사 ( ?.. 설명을 잘 못하겠네요... )
+- command + E : 현재 선택된 텍스트 블럭을 모든 텍스트에디트에 복사 
 
-- command + G : 현재 페이지에 텍스트에디트에 적힌 문구 순차 검색 ( 위 command + E 와 활용도 매우 높습니다 )
+- command + G : 현재 페이지에 텍스트에디트에 적힌 문구 순차 검색 
 
 - command + Shift + G : 현재 페이지에 텍스트에디트에 적힌 문구 역순차 검색
 
@@ -137,3 +137,15 @@ var 변수 : Int = 5
 
 - Set
     같은 데이터 타입의 값을 *순서없이* 저장하는 리스트 (집합)
+
+
+
+
+
+
+
+-------------
+
+참조
+[Xcode 단축키](https://velog.io/@hayeon/Xcode-단축키)
+[Xcode 단축키](https://www.rightpoint.com/rplabs/xcode-tips)
