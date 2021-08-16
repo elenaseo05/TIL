@@ -2,7 +2,7 @@
 ## **Xcode**
 ----
 
-#### Xcode 
+#### Xcode 단축키
 
 - command + Z : undo
 
@@ -34,23 +34,7 @@
 
 - command + Enter : 현재창을 단일창으로 변경
 
-- command + 0 : 왼쪽에 프로젝트 파인더 및 검색 등등 윈도우 숨기기 & 열기
-
-- command + 1 : 프로젝트 파인더 열기
-
-- command + 2 : 프로젝트 하이라키 창 열기
-
-- command + 3 : 프로젝트 검색 창 열기
-
-- command + 4 : 프로젝트 워닝 및 에러 창 열기
-
-- command + 5 : 테스트 타겟창 열기
-
-- command + 6 : 디버그 세션 창
-
-- command + 7 : 디버깅 브레이크 포인트 창
-
-- command + 8 : 빌드 관련 히스토리
+- command + 0 ~ 8 : 왼쪽 윈도우 열기 
 
 - command + \ : 브레이크 포인트 걸기
 
