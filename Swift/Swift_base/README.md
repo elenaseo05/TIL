@@ -111,6 +111,22 @@ var 변수 : Int = 5
 - String: 문자열
 - Any: 모든 타입을 지칭하는 키워드
 
+### Swift 연산자 (Operater)
+
+- 연산자 (Operater)
+- 할당 연산자(Assignment Operator)
+- 사칙 연산자(Arithmetic Operators)
+- 합성 할당 연산자 Compound Assignment Operators
+- 음수 연산자 (Minus Operator)
+- 비교 연산자(Comparison Operators)
+- 삼항 조건 연산자(Ternary Conditional Operator)
+- Nil 병합 연산자(Nil-Coalescing Operator)
+- 범위 연산자(Range Operators)
+    - Closed Range
+    - Half-Open Range
+     - One-Side Ranges
+- 논리 연산자(Logical Operators)
+
 
 ### Swift의 COLLECTION
 - Array
@@ -233,3 +249,4 @@ swift 의 반복문은 다른언어와 유사한듯 다르다!
 참조
 [Xcode 단축키](https://velog.io/@hayeon/Xcode-단축키)
 [Xcode 단축키](https://www.rightpoint.com/rplabs/xcode-tips)
+[기본 연산자 (Basic Operators)](https://jusung.gitbook.io/the-swift-language-guide/language-guide/02-basic-operators#nil-nil-coalescing-operator)
