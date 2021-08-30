@@ -81,3 +81,40 @@ WHERE last_name IN ('Geoni', 'Gates', 'Cabrio');
 ```
 
 문자열 , 숫자를 비교 할 수 있다. 
+
+
+- LIKE연산자
+
+    - 패턴과 일치하는 문자열값을 가진 행을 출력
+    - **_** : 한자리의 문자
+    - **%** : 0~n 자리의 문자
+
+    ```sql 
+    
+    SELECT last_name
+    FROM employees
+    WHERE last_name LIKE '_o%';
+    ```
+   
+TEXTEXTotexttex
+toe
+**LIKE '%o%'**
+    TEXTEXTotexttex
+**LIKE '_o_'**
+    toe
+
+- IS NULL
+null 인지 확인 한다. 
+    **=** 연산자로는 구분 할 수 없음
+
+
+- AND / OR / NOT 연산자
+    - AND 연산자    
+    AND를 사이에 끼고 있는 두 조건식을 동시에 만족하는 행을 결과로 출력
+    - OR 연산자  
+    OR을 끼고 있는 두 조건 중 하나라도 조건을 만족하는 값을 가진 행을 출력
+    - AND OR 연산자   
+    AND가 연산자 우선순위가 높으므로 필요에 따라서 괄호를 사용하여 우선순위를 바꿀 수 있다.
+    - NOT 연산자
+    조건식 앞에 NOT을 사용할 수 있다.
+
