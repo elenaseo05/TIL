@@ -10,5 +10,6 @@
 
 [SELECT 조회](https://github.com/elenaseo05/TIL/blob/main/DB/SELECT.md)
 
-[WHERE 조회](https://github.com/elenaseo05/TIL/blob/main/DB/WHERE.md)
+[WHERE](https://github.com/elenaseo05/TIL/blob/main/DB/WHERE.md)
 
+[ORDER BY 정렬](https://github.com/elenaseo05/TIL/blob/main/DB/ORDER%20BY.md)
