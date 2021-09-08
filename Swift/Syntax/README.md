@@ -1,297 +1,299 @@
 # Swift 
-
-## **Data Type**
+## **Xcode**
 ----
 
-- 상수 와 변수
+#### Xcode 단축키
 
-상수를 선언하는 키워드는 let이다.  
-let 이름: 타입 = 값
+- command + Z : undo
 
-변수를 선언하는 키워드는 var이다.  
-var 이름: 타입 = 값
+- command + Shift + Z : redo
 
-```swift 
-    let 이름: 타입 = 값 //상수 
-    var 이름: 타입 = 값 //변수 
+- command + BackSpace : 커서부터 왼쪽 지우기
 
-    // 값의 타입이 명확할 시 타입 생략 가능
-    let 이름 = 값 
-    var 이름 = 값 
+- command + 방향키 : 해당 방향의 끝으로 이동
 
-    let constant: String = "차후에 변경이 불가능 -> let"
-    let variable: String = "차후에 변경이 가능 -> var"
+- command + Shift + K : 프로젝트 클린
 
-    variable = "변수는 차후에 다른 값으로 할당 가능"
-    constant = "상수는 차후에 값을 변경 불가 " // 오류
+- command + B : 프로젝트 빌드
 
-    // 상수 선언 후에 나중에 값을 할당
-    // 나중에 할당 할 경우 타입 명시 필수 
-    let sum: Int
-    let inputA: Int = 100
-    let inputB: Int = 200
+- command + R : 프로젝트 실행
 
-    // 선언 후 첫 할당
-    sum = inputA + inputB
+- command + Shift + O : 프로젝트 내 파일 / 클래스 / 함수 검색
 
-    // 상수 값 변경 불가 
-    sum = 1 // 오류
+- command + Shift + F : 파인드 창
 
-    // 변수 차후 할당 가능
-    var age: Int
+- command + F : 현재 창에서 검색
 
-    age = 10
+- command + E : 현재 선택된 텍스트 블럭을 모든 텍스트에디트에 복사 
 
-    age = 20 
+- command + G : 현재 페이지에 텍스트에디트에 적힌 문구 순차 검색 
 
+- command + Shift + G : 현재 페이지에 텍스트에디트에 적힌 문구 역순차 검색
 
+- command + alt + Enter : 현재창 이중 분할
+
+- command + Enter : 현재창을 단일창으로 변경
+
+- command + 0 ~ 8 : 왼쪽 윈도우 열기 
+
+- command + \ : 브레이크 포인트 걸기
+
+- command + Y : 브레이크 포인트 비활성화 / 활성화
+
+- command + Shift + Y : 하단 디버그 세션 창 열기 / 닫기
+
+- command + / : 주석 
+
+- control + command + 좌우 화살표 : 이전/이후 페이지 이동
+
+- command + [ ] : 해당 방향으로 들여쓰기
+
+## **Swift 특징**
+----
+
+띄어쓰기 민감 
+불변 객체 중요하게 여김 -> 상수중요하게 여김 
+대소문다 구분 
+
+- 이름 규칙 
+
+1. 대소문자 구분 
+
+2. Loweer Camel Case :  
+function, method, variable, constant
+
+    someVariableName
+
+3. Upper Camel Case :  
+type(class, struct, enum, extension)
+
+    Person 
+    Point
+    Week
+
+- consol log  
+
+1. print : 단순 문자열 출력
+2. dump : 인스턴스의 자세한 설명(description 프로퍼티)까지 출력
+
+- 문자열 보간법
+
+ String Interpolation   
+ 프로그램 실행 중 문자열 내에 변수 또는 상수의 실질적인 값을 표현 하기 위해 사용   
+
+ 사용법 
+
+    \()
+
+구조체 는 dump()으로 출력 하면 모든 정보를 확인 하기 싶다. 
+
+### 상수 & 변수
+
+- 상수 let
+    변하지 않는 값 
+```swift
+let 상수 : Int = 10
+```
+- 변수 var
+    변하는 값 
+```swift
+var 변수 : Int = 5
 ```
 
+### Swift 기본 데이터 타입 (primitive type)
 
-- 기본 데이터 타입
+- Int : 64bit 정수형
+- UInt: 부호가 없는 64bit 정수형 
+- Float: 32bit 부동 소수점 
+- Double: 64bit 부동 소수점 
+- Bool: true, false 값 
+- Character: 문자
+- String: 문자열
+- Any: 모든 타입을 지칭하는 키워드
 
-Swift에는 7가지 기본 데이터 타입 존재
+### Swift 연산자 (Operater)
 
-Swift에서 다른 데이터 타입과 자료교환은 암시적으로 불가능
+- 연산자 (Operater)
+- 할당 연산자(Assignment Operator)
+- 사칙 연산자(Arithmetic Operators)
+- 합성 할당 연산자 Compound Assignment Operators
+- 음수 연산자 (Minus Operator)
+- 비교 연산자(Comparison Operators)
+- 삼항 조건 연산자(Ternary Conditional Operator)
+- Nil 병합 연산자(Nil-Coalescing Operator)
+- 범위 연산자(Range Operators)
+    - Closed Range
+    - Half-Open Range
+     - One-Side Ranges
+- 논리 연산자(Logical Operators)
 
-1. Bool
 
-논리 연산자에 0 과 1을 Bool타입에 대입 할 시 cannot assign -> error
+### Swift의 COLLECTION
+- Array
+    데이터 타입의 값들을 *순서대로* 저정하는 리스트
 
-```swift 
-var someBool: Bool = true
-someBool = false
-// Bool 타입 0 과 1 사용불가 
-someBool = 0 // (X)
-someBool = 1 // (X)
-```
+- Dictionary
+    순서없이 *키(key)와 값(Value) 한 쌍*으로 데이터를 저장하는 컬렉션 타입
 
-2. Int
+- Set
+    같은 데이터 타입의 값을 *순서없이* 저장하는 리스트 (집합)
 
-정수 데이터 타입 
 
-```swift 
-var someInt: Int = -100
-// 실수 대입 불가
-someInt = 100.1 // 컴파일 에러 
-```
+### 함수
+작업의 가장 작은 단위 + 코드의 집합
 
-3. UInt
-
-Unsigned Integer, 양의 정수 타입
-
-```swift 
- var someUint: UInt = 100
-// 음수 대입시 오류발생
-someUInt = -100 // 컴파일 에러 
-```
-
-4. FLoat
-
-Float은 부동소수형 32bit 타입
-부동소수형 타입에는 정수 타입 대입 가능
-
-```swift 
-var someFloat: Float = 3.14  
-someFloat = 3 // 가능 
-```
-
-5. Double
-
-Double은 64bit 부동소수형 타입  
-정수 타입 대입 가능  
-Float타입에 값을 Double에 대입할 시 cannot assign -> 오류 발생 
-
-32bit -> 64bit
-
-```swift 
-var someDouble: Double = 3.14
-// 정수 값 대입 가능
-someDouble = 3
-```
-
-6. Character
-
-문자를 표현하기 위한 타입
-
-유니코드로 표현할 수 있는 모든 문자 대입 가능
-
-문자열과 동일하게 큰따옴표로 표기
-문자 한개만 허용
-
-```swift 
-var someCharacter: Character = "가"
-someCharacter = "A"
-// Character에 문자열 담을 수 없음
-someCharacter = "ABCd" // 오류
-```
-
-7. String
-
-문자열을 담는 타입
-
-연산자를 통하여 문자열을 더 할 수 있다.  
- '+' 연산자 사용가능  
-String에 Character타입 대입 불가
-
-```swift 
-var someString: String = "문자열  "
-someString = someString + "더하기"
-// Character(문자) 타입을 대입 불가
-someString = someCharacter // 컴파일 에러
-```
-
-- Any, AnyObject, nil
-
-기본 데이터 타입은 아니지만, 기본 데이터 타입 위치에서 특별한 역할을 수행하는 키워드들
-
-1. Any
-
-Swift의 모든 타입을 지칭하는 키워드이다.
-
-```Swift
-var someAny: Any = 100
-someAny = "어떤 타입이든 수용이 가능하다."
-someAny = 123.12
-// let someDouble: Double = somAny
-```
-
-2. AnyObject
-
-모든 '클래스 타입'을 지칭하는 프로토콜
+- 함수 선언 방법 
 
 ```swift
-class SomeClass {}
-
-var someAnyObject: AnyObject = SomeClass() 
-
-someAnyObject = 123.12 // 오류발생
+    func 함수명 (파라미터이름 : 데이터 타입 ) -> 반환타입 {
+     return 반환 값
+    }
 ```
 
-3. nil
-없음을 의미하는 키워드 
-null, NULL, Null 동일 
 
+### 조건문
+조건에 따라 실행 여부를 결정하는 구문
 
+if, / if, else / if, else if, else / switch
 
-컬렉션 타입
+```swift
 
-    // 빈 Int Array 생성
-    var integers: Array<Int> = Array<Int>()
-    // 
-    integers.append(1)
-    integers.append(100)
-    //integers.append(101.1) // integer에는 실수를 넣을 수 없음(X)
-
-    integers.contains(100) // 100이라는 값이 포함이 되어있는지?
-    integers.contains(99) // 
-
-    // 0번 인덱스에 있는 값을 없애 달라
-    integers.remove(at: 0)
-    // 마지막 요소를 없애는 것
-    integers.removeLast()
-    // 모두 없애기 
-    integers.removeAll()
-    // intgers에 몇개가 들어있는지 확인
-    integers.count
-Array를 표현할 수 있는 다양한 방법들
-
-    //Array<Double>와 [Double]은 동일한 표현이다.
-    // 빈 Double Array 생성
-    var double: Array<Double> = [Double]()
-
-    // 빈 String Array 생성
-    var strings: [String] = [String]()
-
-    // 빈 Character Array 생성
-    // []는 새로운 빈 Array
-    var characters: [Character] = []
-
-    // let을 사용하여 Array를 선언하면 불변 Array
-    let immutableArray = [1,2,3]
-    // let은 변경이 불가능하기 때문에 append 및 remove를 할 수 없다.
-Dictionary
-
-    // Key가 String 타입이고 Value가 Any인 빈 Dictionary 생성
-    var anyDictionary: Dictionary<String, Any> = [String: Any]()
-    anyDictionary["someKey"] = "value"
-    anyDictionary["anotherKey"] = 100
-
-    anyDictionary // ["someKey": "value", "anotherKey": 100]
-    // key에 대한 값을 변경 할 수 있다.
-    anyDictionary["someKey"] = "dictionary"
-    anyDictionary // ["someKey": "dictionary", "anotherKey": 100]
-
-    // key에 대한 값을 없애고 싶을 때
-    anyDictionary.removeValue(forKey: "anotherKey")
-
-    // key에 대한 값을 없애고 싶을 때
-    anyDictionary["someKey"] = nil
-
-
-    let emptyDictionary: [String: String] = [ : ]
-    let initalizedDictionary: [String: String] = ["name": "jangilkyu", "gender" : "mail"]
-함수 기본
-
-함수 선언
-
-   func 함수이름(매개변수1이름: 매개변수1타입, 매개변수2이름: 매개변수2타입) -> 반환 타입{
-       함수 구현 부
-
-        return 반환 값
-   }
-반환되는 값이 없는 함수
-
-   func printMyName(name: String) -> Void {
-       print(name)
-   }
-
-   printMyName(String: "장일규")
-반환되는 값이 있는 함수
-
-    func sum(a: Int,b: Int) -> Int {
-        return a + b
+    // if문
+    if 조건문 {
+        조건에 일치 할 경우 실행할 구문
     }
-
-    sum(a: 3, b: 2)
-매개변수와 반환값이 전부 없는 경우
-
-    func hello() -> Void {
-        print("hello")
+    
+    //-----------
+    
+    if 조건문 {
+        조건에 일치 할 경우 실행할 구문
+    } else {
+        조건이 일치 하지 않을 경우 실행 할 구문 
     }
-
-    hello()
-함수 고급
-
-매개변수 기본 값
-기본값을 갖는 매개변수는 매개변수 목록 중에 뒤쪽에 위치하는 것이 좋다.
-
-    func greeting(friend: String, me: String = "jangilkyu") {
-        print("Hello \(friend)! I'm \(me)")
+    
+    //-----------
+    
+    if 조건문 {
+        조건에 일치 할 경우 실행할 구문
+    } else if 조건문 {
+        if 조건이 일치하지 않을때 else if의 조건이 일치 할 경우 실행할 구문
+    } else {
+        조건이 일치 하지 않을 경우 실행 할 구문 
     }
+    
+    
+    Switch 비교대상 {
+        case 패턴1:
+        // 패턴 1이 일치 할때 실행되는 구문
+        case 패턴2:
+        // 패턴 2가 일치 할때 실행되는 구문
+        .
+        .
+        .
+        default:
+        // 어떤 패턴과도 일치 하지 않을 때 실행되는 구문
+```
 
-    // 매개변수 기본값을 가지는 매개변수는 생략이 가능
-    greeting(friend: "sujung") // Hello sujung! I'm jangilkyu
-전달인자 레이블
-전달인자 레이블은 함수를 호출할 때에 매개변수의 역할을 더 명확하게 하거나 함수 사용자의 입장에서 표현하고자 할때 사용
 
-    func greeting(to friend: String, from me: String){
-        print("Hello \(friend)! I'm \(me)")
+
+
+### 반복문
+반복적으로 코드가 실행되게 만드는 구문
+
+for-in, while, repeat-while 
+
+
+```swift
+
+    for 루프상수 in 순회대상 {
+     // 실행할 구문...
     }
-
-    // 함수 호출 시 전달인자 레이블 사용해야함
-    greeting(to: "sujung",from: "ilkyu")
-가변 매개변수
-
-매개변수로 전달될 값들에 갯수가 명확치 않을 시 가변 매개변수를 사용할 수 있다.
-
-매개변수 뒤에 ... 마침표 3개를 찍으면된다.
-
-함수당 하나만 가질 수 있다.
-
-    func sayHelloToFriends(me: String, friends: String...) -> String {
-        return "Hello \(friends)! I'm \(me)!"
+    
+    for i in 1..4 {
+        print(i) // 4회 
     }
+    
+    while 조건식 {
+       //실행할 구문
+       // 조건식이 true 가 될 때까지 실행 
+       // => 무한 루프 조심!
+    }
+    
+    repeat {
+       //실행할 구문
+       // do-while 문과 동일
+    } while 조건식
+    
+```
 
-    print(sayHelloToFriends(me: "jangilkyu", friends: "sujung", "mina", "chulsu")) //Hello ["sujung", "mina", "chulsu"]! I'm jangilkyu!
-    print(sayHelloToFriends(me: "ilkyu")) //Hello []! I'm ilkyu!
+for 문은 다른언어의 for-each 와 동일하게 사용 할 수 있다. 
+! 튜플도 사용 가능하다 !
+
+swift 의 반복문은 다른언어와 유사한듯 다르다!
+
+
+### Optional(옵셔널)
+
+    var 변수명 : 타입? = 값 || nil
+
+값이 있을 수도 있고 없을 수도 있는 타입 
+
+
+### Struct 
+
+```
+struct 구조체 이름 {
+    프로퍼티 , 메서드
+}
+```
+
+구조체 이름은 앞글자가 대문자가 되도록 작성한다. 
+
+###  Class
+
+```swift
+class 클래스 이름 {
+  프로퍼티 , 메서드
+}
+```
+클래스 이름은 앞글자가 대문자가 되도록 작성한다. 
+
+#### 구조체( Struct)와  클래스( Class) 
+
+- 공통점 
+    - 값을 저장할 프로퍼티를 선언 할 수 있다. 
+    - 함수적 기능을 하는 메서드를 선언 할 수 있다. 
+    - 내부 값에 '.' 을 사용 하여 접근 할 수 있다. 
+    - 생성자를 사용해 초기화 할 수 있다. 
+    - extension을 사용하여 기능을 확장 할 수 있다. 
+    - Protocol을 채책하여 기능을 설정 할 수 있다. 
+
+- 차이점 
+    - 클래스
+        - 참조 타입
+        - [ARC](#arc)로 메모리를 관리
+        - 상속이 가능
+        - 타입 캐스팅을 통해 런타임에서 클래스 인스턴스의 타입을 확인할 수 있음
+        - deinit을 사용하여 클래스 인스턴스의 메모리 할당을 해제할 수 있음 
+        - -> 같은클래스인스턴스를여러개의변수에할당한뒤값을변경시키면모든변수에영향을줌 (메모리가 복사 됨)
+    - 구조체
+       - 값타입
+        - 구조체 변수를 새로운 변수에 할당할 때마다 새로운 구조체가 할당됩니다  
+        - -> 즉 같은구조체를여러개의변수에할당한뒤값을변경시키더라도다른변수에영향을주지않음 (값 자체를 복사)
+
+
+
+## Swift의 메모리 관리 
+
+### ARC (automatic reference counting)
+
+자동 메모리 할당 해제 기능이다. 
+왜 알아야 할까?
+    -> 작동하지 않는 상황이 있기 때문
+
+-------------
+
+참조
+[Xcode 단축키](https://velog.io/@hayeon/Xcode-단축키)
+[Xcode 단축키](https://www.rightpoint.com/rplabs/xcode-tips)
+[기본 연산자 (Basic Operators)](https://jusung.gitbook.io/the-swift-language-guide/language-guide/02-basic-operators#nil-nil-coalescing-operator)
