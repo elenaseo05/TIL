@@ -284,7 +284,17 @@ class 클래스 이름 {
 
 ### 상속
 
+- *프로퍼티*나 *메소드*를 다른 클래스가 이어 받는 것
+    - 자식 클래스 정의 방법 :  ':' 뒤에 부모 클래스 이름을 작성
+    - 오버라이딩 : 상속 받은 객체를 재 정의 하는 것 
 
+    ```
+    class Sub:Super {
+        override func 부모클래스의 재정의 할 함수() { 
+            재정의 내용 
+        }
+    }
+    ```
 
 -------------
 
@@ -292,3 +302,7 @@ class 클래스 이름 {
 [Xcode 단축키](https://velog.io/@hayeon/Xcode-단축키)
 [Xcode 단축키](https://www.rightpoint.com/rplabs/xcode-tips)
 [기본 연산자 (Basic Operators)](https://jusung.gitbook.io/the-swift-language-guide/language-guide/02-basic-operators#nil-nil-coalescing-operator)
+
+
+[패스트캠퍼스 30개 프로젝트로 배우는 iOS 앱 개발 with Swift 초격차 패키지 Online](https://fastcampus.co.kr/dev_online_iosappfinal)
+*유료강의내용을 참조하여 기록하였습니다.*
