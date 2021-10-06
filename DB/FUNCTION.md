@@ -183,3 +183,75 @@ FROM dual;
      REPLACE('JACKA
      --------------
      BLACK and BLUE
+
+
+
+
+
+### 숫자함수
+
+- ROUND    : 지정된 소수점 자릿수로 값을 반올림
+- TRUNC    : 지정된 소수점 자릿수로 값을 truncate(버림) 
+- MOD    : 나눈 나머지를 반환
+
+- ex)
+    ROUND(45.926, 2)    -    45.93
+    TRUNC (45.926, 2)    -    45.92
+    MOD (1600, 300)    -    100
+
+{ROUND|TRUNC}(계산할 수, 연산할 소수점 아래자리값))
+
+```sql
+SQL> SELECT ROUND(45.923, 2), TRUNC(45.926, 2), MOD(1600, 300)
+  2  FROM dual;
+```
+
+    ROUND(45.923,2) TRUNC(45.926,2) MOD(1600,300)
+    --------------- --------------- -------------
+          45.92       45.92       100
+    나머지
+
+```sql
+SQL> SELECT ROUND(45.923, 2), TRUNC(45.926, 2), TRUNC(1600/ 300, 0)
+  2  FROM dual;
+```
+
+    ROUND(45.923,2) TRUNC(45.926,2) TRUNC(1600/300,0)
+    --------------- --------------- -----------------
+          45.92       45.92         5
+    나누어 떨어지지 않는 값을 나머지 없이 받을때 버림을 사용하여 출력
+
+
+- ROUND
+
+```sql
+SQL> SELECT ROUND(45.923, 2), ROUND(45.923, 0), ROUND(45.923, -1)
+  2  FROM dual;
+```
+    ROUND(45.923,2) ROUND(45.923,0) ROUND(45.923,-1)
+    --------------- --------------- ----------------
+          45.92                46                 50
+
+
+
+- TRUNC
+```sql
+SQL>  SELECT TRUNC(45.923, 2), TRUNC(45.923, 0), TRUNC(45.923, -1)
+  2  FROM dual;
+```
+    TRUNC(45.923,2) TRUNC(45.923,0) TRUNC(45.923,-1)
+    --------------- --------------- ----------------
+          45.92            45                  40
+
+- MOD
+```sql
+SELECT last_name, salary, MOD(salary, 5000)
+FROM employees
+WHERE job_id = 'SA_REP';
+```
+    LAST_NAME              SALARY MOD(SALARY,5000)
+    ------------------------- ---------- ----------------
+    Tucker                   10000            0
+    Bernstein            9500         4500
+
+
