@@ -2,6 +2,14 @@
 ## **Xcode**
 ----
 
+[Xcode 단축키](#xcode-단축키)
+**[Swift 특징](#swift-특징)**
+    [상수/변수](#상수/변수)
+    [Swift 기본 데이터 타입](#swift-기본-데이터-타입-(primitive-type))
+    []()
+    []()
+    []()
+
 #### Xcode 단축키
 
 - command + Z : undo
@@ -139,7 +147,8 @@ var 변수 : Int = 5
     같은 데이터 타입의 값을 *순서없이* 저장하는 리스트 (집합)
 
 
-### 함수
+### 함수 
+-  [Function](https://github.com/elenaseo05/TIL/tree/main/Swift/Syntax/Function.playground)
 작업의 가장 작은 단위 + 코드의 집합
 
 - 함수 선언 방법 
