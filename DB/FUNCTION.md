@@ -255,3 +255,63 @@ WHERE job_id = 'SA_REP';
     Bernstein            9500         4500
 
 
+### 날짜함수
+
+- sysdate 함수
+    현재 데이터베이스 서버 날짜 및 시간을 반환하는 함수
+
+```sql 
+SQL> SELECT sysdate
+  2  FROM dual;
+```
+    SYSDATE
+    ---------
+    03-MAR-21
+
+
+- !!! 날짜를 사용한 산술 연산
+    날짜 + 숫자        날짜        날짜에 일 수를 더한다
+    날짜 - 숫자        날짜        날짜에서 일 수를 뺀다
+    날짜 - 날짜        일 수        한 날짜를 다른 날짜에서 뺀다
+    날짜 + 숫자/24    날짜        날짜에 시간 수를 더한다
+**날짜 데이터의 산술연산 1 = 하루** 
+
+- 날짜에 일수 더하기
+```sql 
+SELECT SYSDATE, SYSDATE + 1
+FROM dual;
+```
+
+    SYSDATE   SYSDATE+1
+    --------- ---------
+    03-MAR-21 04-MAR-21
+
+- 날짜에 시간 수 빼기
+```sql 
+SELECT TO_CHAR(SYSDATE - 1/24, 'YY/MM/DD HH:MI:SS')
+FROM dual;
+```
+
+    TO_CHAR(SYSDATE-1
+    -----------------
+    21/03/03 08:42:18
+
+- 날짜에 분 더하기
+```sql 
+SELECT TO_CHAR(SYSDATE + 8/(24*60), 'YY/MM/DD HH:MI:SS')
+FROM dual;
+```
+
+    TO_CHAR(SYSDATE+8
+    -----------------
+    21/03/03 09:51:25
+
+날짜 - 날짜 한날짜에서 다른 날짜를 빼기 [일 수]
+```sql 
+SELECT SYSDATE - (SYSDATE - 7)
+FROM dual;
+```
+    SYSDATE-(SYSDATE-7)
+    -------------------
+              7
+
