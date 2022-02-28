@@ -5,7 +5,7 @@
 
 - [Swift 특징 & 식별자 이름 규칙 ](https://github.com/elenaseo05/TIL/tree/main/Swift/Swift_base)
 - [data type 데이터 타입 ](https://github.com/elenaseo05/TIL/tree/main/Swift/Syntax)
-- [Swift playground](https://github.com/elenaseo05/TIL/tree/main/Swift/Swift_base/SwiftBase.playground)
+
 
 ##  📚  **JAVA**
 
